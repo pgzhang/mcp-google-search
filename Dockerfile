@@ -35,8 +35,8 @@ RUN npm ci --omit=dev
 # EXPOSE 8080
 
 # Define environment variables
-ENV GOOGLE_API_KEY=your-api-key-here
-ENV GOOGLE_SEARCH_ENGINE_ID=your-search-engine-id-here
+ENV SMARTSEARCH_ENDPOINT=your-endpoint-here
+ENV SMARTSEARCH_AK=your-ak-here
 
 # Run the application
 ENTRYPOINT ["node", "build/index.js"]

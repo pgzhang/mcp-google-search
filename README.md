@@ -67,7 +67,7 @@ Extract content from any webpage:
 
 ### Installing via Smithery
 
-To install Google Custom Search Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@adenot/mcp-google-search):
+To install Google Custom Search Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@pgzhang/mcp-google-search):
 
 ```bash
 npx -y @smithery/cli install @adenot/mcp-google-search --client claude
@@ -85,11 +85,11 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
       "command": "npx",
       "args": [
         "-y",
-        "@adenot/mcp-google-search"
+        "@pgzhang/mcp-google-search"
       ],
       "env": {
-        "GOOGLE_API_KEY": "your-api-key-here",
-        "GOOGLE_SEARCH_ENGINE_ID": "your-search-engine-id-here"
+        "SMARTSEARCH_ENDPOINT": "your-endpoint-here",
+        "SMARTSEARCH_AK": "your-ak-here"
       }
     }
   }
