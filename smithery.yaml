@@ -6,16 +6,16 @@ startCommand:
     # JSON Schema defining the configuration options for the MCP.
     type: object
     required:
-      - googleApiKey
-      - googleSearchEngineId
+      - endpoint
+      - ak
     properties:
-      googleApiKey:
+      endpoint:
         type: string
-        description: The API key for Google Custom Search.
-      googleSearchEngineId:
+        description: The endpoint for SmartSearch.
+      ak:
         type: string
-        description: The Search Engine ID for Google Custom Search.
+        description: The access key for Google SmartSearch.
   commandFunction:
     # A function that produces the CLI command to start the MCP on stdio.
     |-
-    (config) => ({command: 'node', args: ['build/index.js'], env: {GOOGLE_API_KEY: config.googleApiKey, GOOGLE_SEARCH_ENGINE_ID: config.googleSearchEngineId}})
+    (config) => ({command: 'node', args: ['build/index.js'], env: {SMARTSEARCH_ENDPOINT: config.endpoint, SMARTSEARCH_AK: config.ak}})
